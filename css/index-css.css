@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #05020d;
+  color: #ffffff;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#stars {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background:
+    radial-gradient(circle at top, rgba(118, 61, 255, 0.18), transparent 35%),
+    linear-gradient(180deg, #090414 0%, #05020d 100%);
+}
+
+.page {
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px 40px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: #c9a8ff;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6.8rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 45px rgba(154, 91, 255, 0.45);
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0 auto 48px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.division-card {
+  position: relative;
+  min-height: 260px;
+  padding: 32px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  overflow: hidden;
+  isolation: isolate;
+  background: rgba(255, 255, 255, 0.065);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.division-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(180, 112, 255, 0.42), transparent 55%);
+  transition: opacity 0.35s ease;
+}
+
+.division-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(210, 176, 255, 0.48);
+  background: rgba(255, 255, 255, 0.095);
+}
+
+.division-card:hover::before {
+  opacity: 1;
+}
+
+.icon {
+    width: 84px;
+    height: 84px;
+    margin: 0 auto 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.icon img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+    display: block;
+}
+
+.division-card h2 {
+  font-size: 1.65rem;
+  margin-bottom: 12px;
+}
+
+.division-card p {
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.55;
+}
+
+.jelly {
+  box-shadow: 0 24px 90px rgba(143, 82, 255, 0.18);
+}
+
+.flow {
+  box-shadow: 0 24px 90px rgba(98, 165, 255, 0.15);
+}
+
+.silver {
+  box-shadow: 0 24px 90px rgba(210, 210, 255, 0.13);
+}
+
+.card-image {
+    height: 130px;
+    margin: -10px 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.division-card:hover .card-image img {
+    transform: scale(1.08);
+}
+
+.smoke {
+  position: absolute;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(65px);
+  opacity: 0.34;
+  animation: smokeMove 11s ease-in-out infinite alternate;
+}
+
+.smoke-one {
+  top: -180px;
+  left: -130px;
+  background: #7b2cff;
+}
+
+.smoke-two {
+  right: -130px;
+  bottom: -160px;
+  background: #b14cff;
+  animation-delay: -4s;
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  min-height: 90px;
+  padding: 24px 20px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.9rem;
+}
+
+.footer nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.58);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+@keyframes smokeMove {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(40px, -30px, 0) scale(1.18);
+  }
+}
+
+@media (max-width: 860px) {
+  .division-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .division-card {
+    min-height: 210px;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

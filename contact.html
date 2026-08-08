@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Contact DeerDigital regarding games, mobile apps, support, partnerships or general enquiries."
+    >
+
+    <meta name="theme-color" content="#07030f">
+
+    <title>Contact | DeerDigital</title>
+
+    <link rel="stylesheet" href="css/documents.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body id="top">
+
+    <canvas id="stars" aria-hidden="true"></canvas>
+
+    <div class="page-background" aria-hidden="true">
+        <div class="smoke smoke-one"></div>
+        <div class="smoke smoke-two"></div>
+        <div class="smoke smoke-three"></div>
+        <div class="background-grid"></div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="Return to DeerDigital"
+            >
+                <span class="brand-symbol" aria-hidden="true">
+                    D
+                </span>
+
+                <span class="brand-name">
+                    DeerDigital
+                </span>
+            </a>
+
+            <div class="header-context">
+                DeerDigital
+                <span>/</span>
+                Contact
+            </div>
+
+            <a href="index.html" class="back-link">
+                <span aria-hidden="true">←</span>
+                Back to home
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobileNavigation"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+        <nav
+            class="mobile-navigation"
+            id="mobileNavigation"
+            aria-label="Contact navigation"
+        >
+            <a href="#contact-form">Send a message</a>
+            <a href="#divisions">Our divisions</a>
+            <a href="#business-details">Business details</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+
+        <div class="reading-progress">
+            <span id="readingProgress"></span>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="contact-hero">
+
+            <div class="contact-orbit orbit-large" aria-hidden="true"></div>
+            <div class="contact-orbit orbit-small" aria-hidden="true"></div>
+
+            <div class="contact-hero-content">
+
+                <p class="eyebrow">
+                    Contact DeerDigital
+                </p>
+
+                <h1>
+                    Let’s create
+                    <span>something meaningful.</span>
+                </h1>
+
+                <p class="contact-hero-description">
+                    Questions about our games, mobile apps, support,
+                    publishing or business cooperation are always welcome.
+                </p>
+
+                <a
+                    href="mailto:deerdigital@seznam.cz"
+                    class="hero-email"
+                >
+                    <span>deerdigital@seznam.cz</span>
+                    <strong aria-hidden="true">↗</strong>
+                </a>
+
+                <div class="contact-status">
+
+                    <span class="status-dot"></span>
+
+                    <p>
+                        Open for enquiries
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section
+            class="contact-main"
+            id="contact-form"
+        >
+
+            <div class="contact-intro">
+
+                <p class="eyebrow">
+                    Send a message
+                </p>
+
+                <h2>
+                    What would you like
+                    to talk about?
+                </h2>
+
+                <p>
+                    Choose the most relevant topic and write your message.
+                    The form will prepare an email in your default email app.
+                </p>
+
+            </div>
+
+            <form
+                class="contact-form"
+                id="contactForm"
+                novalidate
+            >
+
+                <div class="form-row">
+
+                    <div class="form-field">
+
+                        <label for="name">
+                            Your name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            autocomplete="name"
+                            placeholder="How should we address you?"
+                            required
+                        >
+
+                        <span class="field-error">
+                            Please enter your name.
+                        </span>
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="email">
+                            Your email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+                        <span class="field-error">
+                            Please enter a valid email address.
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="topic">
+                        Topic
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select
+                            id="topic"
+                            name="topic"
+                            required
+                        >
+                            <option value="">
+                                Choose a topic
+                            </option>
+
+                            <option value="General enquiry">
+                                General enquiry
+                            </option>
+
+                            <option value="App or game support">
+                                App or game support
+                            </option>
+
+                            <option value="Business cooperation">
+                                Business cooperation
+                            </option>
+
+                            <option value="Publishing">
+                                Publishing
+                            </option>
+
+                            <option value="Privacy request">
+                                Privacy request
+                            </option>
+
+                            <option value="Legal enquiry">
+                                Legal enquiry
+                            </option>
+                        </select>
+
+                    </div>
+
+                    <span class="field-error">
+                        Please choose a topic.
+                    </span>
+
+                </div>
+
+                <div
+                    class="form-field product-field"
+                    id="productField"
+                >
+
+                    <label for="product">
+                        Product
+                        <span>Optional</span>
+                    </label>
+
+                    <div class="select-wrapper">
+
+                        <select
+                            id="product"
+                            name="product"
+                        >
+                            <option value="">
+                                Select a game or app
+                            </option>
+
+                            <option value="Pexeso">
+                                Pexeso
+                            </option>
+
+                            <option value="Coloring Fun">
+                                Coloring Fun
+                            </option>
+
+                            <option value="Lovy">
+                                Lovy
+                            </option>
+
+                            <option value="DeerDigital website">
+                                DeerDigital website
+                            </option>
+
+                            <option value="Other">
+                                Other
+                            </option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="8"
+                        maxlength="3000"
+                        placeholder="Tell us what happened, what you need or what you would like to discuss."
+                        required
+                    ></textarea>
+
+                    <div class="message-meta">
+
+                        <span class="field-error">
+                            Please enter your message.
+                        </span>
+
+                        <span id="characterCount">
+                            0 / 3000
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <label class="privacy-check">
+
+                    <input
+                        type="checkbox"
+                        id="privacyConsent"
+                        required
+                    >
+
+                    <span class="custom-checkbox" aria-hidden="true"></span>
+
+                    <span>
+                        I understand that the information I provide will be
+                        used to respond to my enquiry as described in the
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>.
+                    </span>
+
+                </label>
+
+                <span
+                    class="consent-error"
+                    id="consentError"
+                >
+                    Please confirm that you have read the privacy information.
+                </span>
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="submit-button"
+                    >
+                        <span>Prepare email</span>
+                        <strong aria-hidden="true">↗</strong>
+                    </button>
+
+                    <p>
+                        No message is stored directly on this website.
+                    </p>
+
+                </div>
+
+            </form>
+
+        </section>
+
+        <section
+            class="direct-contact-section"
+            aria-label="Direct contact"
+        >
+
+            <article class="direct-contact-card email-card">
+
+                <div class="contact-card-icon" aria-hidden="true">
+                    ↗
+                </div>
+
+                <p class="card-label">
+                    Direct email
+                </p>
+
+                <h2>
+                    Prefer writing directly?
+                </h2>
+
+                <p>
+                    Send us an email from any device or email provider.
+                </p>
+
+                <a href="mailto:deerdigital@seznam.cz">
+                    deerdigital@seznam.cz
+                </a>
+
+            </article>
+
+            <article class="direct-contact-card response-card">
+
+                <div class="contact-card-icon" aria-hidden="true">
+                    ◷
+                </div>
+
+                <p class="card-label">
+                    Response
+                </p>
+
+                <h2>
+                    Every real message is read.
+                </h2>
+
+                <p>
+                    Response times may vary depending on the topic,
+                    development schedule and current workload.
+                </p>
+
+                <span class="response-note">
+                    Please do not send the same message repeatedly.
+                </span>
+
+            </article>
+
+        </section>
+
+        
+        <section
+            class="business-section"
+            id="business-details"
+        >
+
+            <div class="business-heading">
+
+                <p class="eyebrow">
+                    Business details
+                </p>
+
+                <h2>
+                    Website operator.
+                </h2>
+
+            </div>
+
+            <div class="business-panel">
+
+                <div>
+
+                    <span>Legal name</span>
+                    <strong>Přemysl Herejk</strong>
+
+                </div>
+
+                <div>
+
+                    <span>Business ID</span>
+                    <strong>21289999</strong>
+
+                </div>
+
+                <div>
+
+                    <span>Registered office</span>
+                    <strong>Dašická 1763, Pardubice</strong>
+
+                </div>
+
+                <div>
+
+                    <span>Email</span>
+
+                    <a href="mailto:deerdigital@seznam.cz">
+                        deerdigital@seznam.cz
+                    </a>
+
+                </div>
+
+            </div>
+
+           
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+
+        <div class="footer-main">
+
+            <a href="index.html" class="footer-brand">
+                DeerDigital
+            </a>
+
+            <nav aria-label="Footer navigation">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span> DeerDigital.
+                All rights reserved.
+            </p>
+
+            <a href="#top" id="backToTop">
+                Back to top ↑
+            </a>
+
+        </div>
+
+    </footer>
+
+    <div
+        class="form-success"
+        id="formSuccess"
+        aria-hidden="true"
+        role="status"
+    >
+
+        <div class="success-icon" aria-hidden="true">
+            ✓
+        </div>
+
+        <div>
+            <strong>Email prepared</strong>
+
+            <span>
+                Your email application should open automatically.
+            </span>
+        </div>
+
+        <button
+            type="button"
+            id="closeSuccess"
+            aria-label="Close message"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <script src="js/documents.js"></script>
+    <script src="js/contact.js"></script>
+
+</body>
+
+</html>
